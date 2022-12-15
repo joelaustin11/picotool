@@ -19,9 +19,9 @@ else (LIBUSB_INCLUDE_DIR AND LIBUSB_LIBRARIES)
         pkg_check_modules(PC_LIBUSB libusb-1.0.0.0)
     ENDIF(NOT WIN32)
     FIND_PATH(LIBUSB_INCLUDE_DIR libusb.h
-            HINTS $ENV{LIBUSB_ROOT}/include/libusb-1.0.0
+            HINTS $ENV{LIBUSB_ROOT}/include/libusb-1.0
             PATHS ${PC_LIBUSB_INCLUDEDIR} ${PC_LIBUSB_INCLUDE_DIRS})
-    FIND_LIBRARY(LIBUSB_LIBRARIES NAMES libusb-1.0.0 usb-1.0 usb
+    FIND_LIBRARY(LIBUSB_LIBRARIES NAMES libusb-1.0 usb-1.0 usb
             HINTS $ENV{LIBUSB_ROOT}/VS2019/MS32/static
             PATHS ${PC_LIBUSB_LIBDIR} ${PC_LIBUSB_LIBRARY_DIRS})
     include(FindPackageHandleStandardArgs)
