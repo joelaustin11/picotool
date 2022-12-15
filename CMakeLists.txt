@@ -29,7 +29,7 @@ list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_LIST_DIR}/cmake)
 
 add_subdirectory(picoboot_connection)
 
-find_package(libusb-0.1-4)
+find_package(LIBUSB)
 if (NOT LIBUSB_FOUND)
     message(FATAL_ERROR "picotool cannot be built because libUSB is not found")
 else()
